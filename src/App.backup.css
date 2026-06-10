@@ -1,0 +1,412 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top right, rgba(50, 188, 198, 0.25), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f3fbfc 100%);
+}
+
+.nav {
+  width: min(1180px, calc(100% - 40px));
+  margin: auto;
+  padding: 26px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 900;
+  color: #073b5a;
+}
+
+.menu {
+  display: flex;
+  gap: 28px;
+  font-weight: 800;
+  color: #456b82;
+}
+
+.hero {
+  width: min(1180px, calc(100% - 40px));
+  margin: auto;
+  min-height: 720px;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.eyebrow {
+  color: #119da4;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  font-size: 13px;
+}
+
+h1 {
+  margin: 16px 0 24px;
+  font-size: clamp(52px, 8vw, 92px);
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  color: #073b5a;
+}
+
+h2 {
+  margin: 16px 0 24px;
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: #073b5a;
+}
+
+.heroText p,
+.section p {
+  font-size: 19px;
+  line-height: 1.75;
+  color: #557287;
+  max-width: 680px;
+}
+
+.actions,
+.contactBox {
+  margin-top: 34px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  min-height: 54px;
+  padding: 0 25px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.primary {
+  color: white;
+  background: #119da4;
+  box-shadow: 0 18px 40px rgba(17, 157, 164, 0.28);
+}
+
+.secondary {
+  color: #073b5a;
+  background: white;
+  border: 1px solid #dcecf1;
+}
+
+.heroImage {
+  background: white;
+  padding: 16px;
+  border-radius: 38px;
+  box-shadow: 0 34px 90px rgba(7, 59, 90, 0.15);
+}
+
+.heroPhoto {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  border-radius: 28px;
+  display: block;
+}
+
+.section {
+  width: min(1180px, calc(100% - 40px));
+  margin: auto;
+  padding: 100px 0;
+}
+
+.cards {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  padding: 18px;
+  border-radius: 28px;
+  border: 1px solid #e4f0f4;
+  box-shadow: 0 20px 60px rgba(7, 59, 90, 0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 18px;
+}
+
+.card h3 {
+  margin: 0 0 12px;
+  color: #073b5a;
+  font-size: 24px;
+}
+
+.card p {
+  font-size: 17px;
+}
+
+.gallery {
+  margin-top: 34px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 54px) / 4);
+  gap: 18px;
+  overflow-x: auto;
+  padding-bottom: 24px;
+}
+
+.gallery img {
+  height: 230px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.contact {
+  text-align: center;
+  padding-bottom: 130px;
+}
+
+.contact p {
+  margin: 0 auto;
+}
+
+.contactBox {
+  justify-content: center;
+}
+
+@media (max-width: 850px) {
+  .menu {
+    display: none;
+  }
+
+  .hero,
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 70px 0;
+  }
+
+  h1 {
+    font-size: 54px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-auto-columns: 82%;
+  }
+}
+
+@media (max-width: 520px) {
+  .brand {
+    font-size: 17px;
+  }
+
+  h1 {
+    font-size: 56px;
+  }
+
+  .hero {
+    padding-top: 110px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+}
+
+.flipCard {
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flipInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipInner {
+  transform: rotateY(180deg);
+}
+
+.flipFront,
+.flipBack {
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.flipFront {
+  background: white;
+  padding: 32px;
+  border: 1px solid #e4f0f4;
+  box-shadow: 0 20px 60px rgba(7, 59, 90, 0.08);
+}
+
+.flipBack {
+  transform: rotateY(180deg);
+  background: white;
+}
+
+.flipBack img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.whyBook,
+.yachtGallerySection {
+  width: min(1180px, calc(100% - 40px));
+  margin: 34px auto 0;
+  padding: 46px;
+  border-radius: 36px;
+  background: rgba(255,255,255,0.94);
+  border: 1px solid #dcecf1;
+  box-shadow: 0 24px 80px rgba(7,59,90,0.12);
+}
+
+.yachtGallerySection {
+  margin-bottom: 110px;
+}
+
+.whyBook h2,
+.yachtGallerySection h2 {
+  margin: 14px 0 34px;
+  color: #073b5a;
+  font-size: clamp(38px, 5vw, 66px);
+  line-height: .92;
+  letter-spacing: -0.06em;
+}
+
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.whyGrid article {
+  background: #f5fbfc;
+  border: 1px solid #dcecf1;
+  border-radius: 28px;
+  padding: 28px;
+  box-shadow: none;
+}
+
+.whyGrid span {
+  font-size: 28px;
+}
+
+.whyGrid h3 {
+  margin: 16px 0 10px;
+  color: #073b5a;
+  font-size: 21px;
+}
+
+.whyGrid p {
+  margin: 0;
+  color: #557287;
+  line-height: 1.6;
+}
+
+.yachtGallery {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0 30px;
+}
+
+.yachtGallery img {
+  flex: 0 0 420px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 30px;
+  scroll-snap-align: start;
+  transition: all .35s ease;
+  box-shadow: 0 20px 55px rgba(7,59,90,0.14);
+  filter: saturate(1.08) contrast(1.03);
+}
+
+.yachtGallery img:hover {
+  transform: translateY(-8px) scale(1.03);
+}
+
+.yachtGallery::-webkit-scrollbar {
+  height: 10px;
+}
+
+.yachtGallery::-webkit-scrollbar-track {
+  background: #d8eef3;
+  border-radius: 999px;
+}
+
+.yachtGallery::-webkit-scrollbar-thumb {
+  background: #10aeb5;
+  border-radius: 999px;
+}
+
+@media (max-width: 950px) {
+  .whyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .yachtGallery img {
+    flex-basis: 78%;
+  }
+}
+
+@media (max-width: 560px) {
+  .whyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .whyBook,
+  .yachtGallerySection {
+    padding: 26px;
+  }
+}
