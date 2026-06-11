@@ -797,3 +797,17 @@
     padding-top: 230px !important;
   }
 }
+
+
+@media (max-width: 760px) {
+  .bookingNav .menu {
+    gap: 26px !important;
+    justify-content: center !important;
+  }
+
+  .bookingNav .menu button {
+    font-size: 15px !important;
+    font-weight: 850 !important;
+    padding: 6px 0 !important;
+  }
+}
