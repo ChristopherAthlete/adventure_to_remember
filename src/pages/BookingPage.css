@@ -737,3 +737,63 @@
     padding-top: 165px;
   }
 }
+/* FINAL mobile booking navbar override */
+@media (max-width: 760px) {
+  .bookingNav {
+    width: calc(100% - 20px) !important;
+    top: 10px !important;
+    padding: 10px 12px !important;
+    border-radius: 28px !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    justify-content: center !important;
+  }
+
+  .bookingBrand {
+    flex: 1 1 100% !important;
+    justify-content: center !important;
+    font-size: 14px !important;
+  }
+
+  .bookingBrand span {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 13px !important;
+  }
+
+  .bookingNav .menu {
+    display: flex !important;
+    order: 2 !important;
+    flex: 1 1 100% !important;
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    flex-wrap: wrap !important;
+  }
+
+  .bookingNav .menu button {
+    display: inline-flex !important;
+    font-size: 13px !important;
+    padding: 4px 0 !important;
+  }
+
+  .bookingNav .languageSwitcher {
+    display: flex !important;
+    order: 3 !important;
+    flex: 1 !important;
+    justify-content: flex-start !important;
+  }
+
+  .bookingNav .backButton {
+    display: inline-flex !important;
+    order: 4 !important;
+    height: 42px !important;
+    padding: 0 16px !important;
+    font-size: 13px !important;
+    white-space: nowrap !important;
+  }
+
+  .bookingPage {
+    padding-top: 230px !important;
+  }
+}
