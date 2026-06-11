@@ -34,6 +34,26 @@ import gallery5 from './assets/gallery/gallery-5.png'
 import gallery12 from './assets/gallery/gallery-12.png'
 import gallery13 from './assets/gallery/gallery-13.png'
 
+import hero1Poster from './assets/hero-posters/hero-1.jpg'
+import hero3Poster from './assets/hero-posters/hero-3.jpg'
+import hero7Poster from './assets/hero-posters/hero-7.jpg'
+import hero9Poster from './assets/hero-posters/hero-9.jpg'
+import hero10Poster from './assets/hero-posters/hero-10.jpg'
+import hero14Poster from './assets/hero-posters/hero-14.jpg'
+import hero15Poster from './assets/hero-posters/hero-15.jpg'
+import hero16Poster from './assets/hero-posters/hero-16.jpg'
+
+const posters = [
+  hero1Poster,
+  hero3Poster,
+  hero16Poster,
+  hero7Poster,
+  hero9Poster,
+  hero10Poster,
+  hero14Poster,
+  hero15Poster
+]
+
 
 const galleryImages = [
   gallery8,
@@ -52,8 +72,7 @@ const galleryImages = [
 
 ]
 
-function VideoSequence({ videos }) {
-  const videoRef = useRef(null)
+function VideoSequence({ videos, poster }) {  const videoRef = useRef(null)
   const [index, setIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
 
@@ -111,6 +130,7 @@ function VideoSequence({ videos }) {
   key={index}
   className="storyVideo"
   src={videos[index]}
+  poster={poster}
   muted
   playsInline
   preload="auto"
