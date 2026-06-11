@@ -55,45 +55,85 @@ const galleryImages = [
 function VideoSequence({ videos }) {
   const videoRef = useRef(null)
   const [index, setIndex] = useState(0)
-  const [isHovering, setIsHovering] = useState(false)
+  const [isPlaying, setIsPlaying] = useState(false)
 
-  useEffect(() => {
-    if (isHovering && videoRef.current) {
-      videoRef.current.play()
+  async function playVideo() {
+    if (!videoRef.current) return
+
+    setIsPlaying(true)
+
+    try {
+      await videoRef.current.play()
+    } catch {
+      setIsPlaying(false)
     }
-  }, [index, isHovering])
-
-  function startVideo() {
-    setIsHovering(true)
-    videoRef.current.play()
   }
 
   function stopVideo() {
-    setIsHovering(false)
+    if (!videoRef.current) return
+
     videoRef.current.pause()
     videoRef.current.currentTime = 0
     setIndex(0)
+    setIsPlaying(false)
+  }
+
+  function toggleVideo() {
+    if (!videoRef.current) return
+
+    if (videoRef.current.paused) {
+      playVideo()
+    } else {
+      stopVideo()
+    }
   }
 
   function nextVideo() {
-    if (isHovering) {
+    if (isPlaying) {
       setIndex((current) => (current + 1) % videos.length)
     }
   }
 
+  useEffect(() => {
+    if (isPlaying && videoRef.current) {
+      videoRef.current.play().catch(() => setIsPlaying(false))
+    }
+  }, [index, isPlaying])
+
   return (
-    <video
-      ref={videoRef}
-      key={index}
-      className="storyVideo"
-      src={videos[index]}
-      muted
-      playsInline
-      preload="metadata"
-      onMouseEnter={startVideo}
+    <div
+      className={`storyVideoWrap ${isPlaying ? 'isPlaying' : ''}`}
+      onMouseEnter={playVideo}
       onMouseLeave={stopVideo}
-      onEnded={nextVideo}
-    />
+    >
+      <video
+  ref={videoRef}
+  key={index}
+  className="storyVideo"
+  src={videos[index]}
+  muted
+  playsInline
+  preload="auto"
+  onLoadedData={() => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0.01
+    }
+  }}
+  onClick={toggleVideo}
+  onEnded={nextVideo}
+/>
+
+      {!isPlaying && (
+        <button
+          className="videoPlayButton"
+          type="button"
+          onClick={playVideo}
+          aria-label="Play video"
+        >
+          ▶
+        </button>
+      )}
+    </div>
   )
 }
 
