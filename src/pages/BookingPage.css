@@ -835,50 +835,123 @@
 @media (max-width: 900px) {
   .bookingPage {
     background:
-      linear-gradient(rgba(246,251,252,0.76), rgba(246,251,252,0.9)),
+      linear-gradient(rgba(246,251,252,0.50), rgba(246,251,252,0.68)),
       url('../assets/tlo-booking/tlo-1.JPG'),
       url('../assets/tlo-booking/tlo-2.png'),
       url('../assets/tlo-booking/tlo-3.png'),
       url('../assets/tlo-booking/tlo-4.png'),
-      url('../assets/tlo-booking/tlo-5.png'),
+      url('../assets/tlo-booking/tlo-5.jpg'),
       url('../assets/tlo-booking/tlo-6.png'),
-      url('../assets/tlo-booking/tlo-7.png'),
-      url('../assets/tlo-booking/tlo-8.png') !important;
+      url('../assets/tlo-booking/tlo-7.jpg'),
+      url('../assets/tlo-booking/tlo-8.png'),
+      url('../assets/tlo-booking/tlo-9.jpg'),
+      url('../assets/tlo-booking/tlo-10.png'),
+      url('../assets/tlo-booking/tlo-11.jpg'),
+      url('../assets/tlo-booking/tlo-12.jpg'),
+      url('../assets/tlo-booking/tlo-13.jpg'),
+      url('../assets/tlo-booking/tlo-14.png'),
+      url('../assets/tlo-booking/tlo-15.png'),
+      url('../assets/tlo-booking/tlo-16.jpg'),
+      url('../assets/tlo-booking/tlo-17.png'),
+      url('../assets/tlo-booking/tlo-18.png'),
+      url('../assets/tlo-booking/tlo-19.png'),
+      url('../assets/tlo-booking/tlo-20.png'),
+      url('../assets/tlo-booking/tlo-21.png'),
+      url('../assets/tlo-booking/tlo-22.jpg'),
+      url('../assets/tlo-booking/tlo-23.png'),
+      url('../assets/tlo-booking/tlo-24.png'),
+      url('../assets/tlo-booking/tlo-25.png'),
+      url('../assets/tlo-booking/tlo-26.png'),
+      url('../assets/tlo-booking/tlo-27.jpg') !important;
 
     background-size:
       auto,
-      50% 320px,
-      50% 320px,
-      50% 320px,
-      50% 320px,
-      50% 320px,
-      50% 320px,
-      50% 320px,
-      50% 320px !important;
+      50% 280px, 50% 280px, 50% 280px, 50% 280px,
+      50% 280px, 50% 280px, 50% 280px, 50% 280px,
+      50% 280px, 50% 280px, 50% 280px, 50% 280px,
+      50% 280px, 50% 280px, 50% 280px, 50% 280px,
+      50% 280px, 50% 280px, 50% 280px, 50% 280px,
+      50% 280px, 50% 280px, 50% 280px, 50% 280px,
+      50% 280px, 50% 280px, 50% 280px !important;
 
     background-position:
       center,
-      left 0px,
-      right 0px,
-      left 320px,
-      right 320px,
-      left 640px,
-      right 640px,
-      left 960px,
-      right 960px !important;
+      left 0px, right 0px,
+      left 280px, right 280px,
+      left 560px, right 560px,
+      left 840px, right 840px,
+      left 1120px, right 1120px,
+      left 1400px, right 1400px,
+      left 1680px, right 1680px,
+      left 1960px, right 1960px,
+      left 2240px, right 2240px,
+      left 2520px, right 2520px,
+      left 2800px, right 2800px,
+      left 3080px, right 3080px,
+      left 3360px, right 3360px,
+      center 3640px !important;
 
-    background-repeat:
-      no-repeat,
-      repeat-y,
-      repeat-y,
-      repeat-y,
-      repeat-y,
-      repeat-y,
-      repeat-y,
-      repeat-y,
-      repeat-y !important;
-
+    background-repeat: no-repeat !important;
     background-attachment: scroll !important;
     background-color: #f6fbfc !important;
   }
+}
+
+.mobileBookingBg {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .bookingPage {
+    position: relative;
+    overflow: hidden;
+    background: #f6fbfc !important;
+    background-image: none !important;
+    background-size: auto !important;
+    background-position: initial !important;
+    background-attachment: scroll !important;
+  }
+
+  .mobileBookingBg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+    opacity: 0.45;
+    pointer-events: none;
+  }
+
+  .mobileBookingBg img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+  }
+
+  .bookingPage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(246,251,252,0.36);
+    pointer-events: none;
+  }
+
+  .bookingHero,
+  .bookingLayout,
+  .bookingContent,
+  .whyBook,
+  .yachtGallerySection {
+    position: relative;
+    z-index: 2;
+  }
+
+  .bookingNav {
+    z-index: 50;
+  }
+
 }

@@ -11,12 +11,45 @@ import book5 from '../assets/booking/Book-5.png'
 import book6 from '../assets/booking/Book-6.png'
 import book7 from '../assets/booking/Book-7.png'
 
+import tlo1 from '../assets/tlo-booking/tlo-1.JPG'
+import tlo2 from '../assets/tlo-booking/tlo-2.png'
+import tlo3 from '../assets/tlo-booking/tlo-3.png'
+import tlo4 from '../assets/tlo-booking/tlo-4.png'
+import tlo5 from '../assets/tlo-booking/tlo-5.jpg'
+import tlo6 from '../assets/tlo-booking/tlo-6.png'
+import tlo7 from '../assets/tlo-booking/tlo-7.jpg'
+import tlo8 from '../assets/tlo-booking/tlo-8.png'
+import tlo9 from '../assets/tlo-booking/tlo-9.jpg'
+import tlo10 from '../assets/tlo-booking/tlo-10.png'
+import tlo11 from '../assets/tlo-booking/tlo-11.jpg'
+import tlo12 from '../assets/tlo-booking/tlo-12.jpg'
+import tlo13 from '../assets/tlo-booking/tlo-13.jpg'
+import tlo14 from '../assets/tlo-booking/tlo-14.png'
+import tlo15 from '../assets/tlo-booking/tlo-15.png'
+import tlo16 from '../assets/tlo-booking/tlo-16.jpg'
+import tlo17 from '../assets/tlo-booking/tlo-17.png'
+import tlo18 from '../assets/tlo-booking/tlo-18.png'
+import tlo19 from '../assets/tlo-booking/tlo-19.png'
+import tlo20 from '../assets/tlo-booking/tlo-20.png'
+import tlo21 from '../assets/tlo-booking/tlo-21.png'
+import tlo22 from '../assets/tlo-booking/tlo-22.jpg'
+import tlo23 from '../assets/tlo-booking/tlo-23.png'
+import tlo24 from '../assets/tlo-booking/tlo-24.png'
+import tlo25 from '../assets/tlo-booking/tlo-25.png'
+import tlo26 from '../assets/tlo-booking/tlo-26.png'
+import tlo27 from '../assets/tlo-booking/tlo-27.jpg'
 const yachtGallery = [book1, book2, book3, book4, book5, book6, book7]
 
-const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
-const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
-const CUSTOMER_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_CUSTOMER_TEMPLATE_ID // mail do klienta
-const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+const bookingBgImages = [
+  tlo1, tlo2, tlo3, tlo4, tlo5, tlo6, tlo7, tlo8, tlo9,
+  tlo10, tlo11, tlo12, tlo13, tlo14, tlo15, tlo16, tlo17, tlo18,
+  tlo19, tlo20, tlo21, tlo22, tlo23, tlo24, tlo25, tlo26, tlo27
+]
+
+const SERVICE_ID = 'service_qebn4hw'
+const TEMPLATE_ID = 'template_48r7r0s'
+const CUSTOMER_TEMPLATE_ID = 'template_a8i8roc' // mail do klienta
+const PUBLIC_KEY = 'ttwZorHnMci735T9U'
 
 function getCustomerMessage(language, data) {
   if (language === 'pl') {
@@ -173,6 +206,11 @@ templateParams.customer_message = getCustomerMessage(language, templateParams)
 
   return (
     <main className="bookingPage">
+      <div className="mobileBookingBg" aria-hidden="true">
+  {[...bookingBgImages, ...bookingBgImages, ...bookingBgImages].map((image, index) => (
+    <img src={image} alt="" key={index} />
+  ))}
+</div>
       <header className="bookingNav">
         <button className="bookingBrand" type="button" onClick={goHome}>
           <span>ATR</span>
@@ -416,7 +454,7 @@ templateParams.customer_message = getCustomerMessage(language, templateParams)
         <p className="bookingTag">{t.booking.yachtGallery}</p>
         <h2>{t.booking.yachtTitle}</h2>
 
-        <div className="gallery">
+        <div className="yachtGallery">
           {yachtGallery.map((image, index) => (
             <img
               key={index}
