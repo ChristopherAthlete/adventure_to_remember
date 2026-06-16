@@ -997,3 +997,46 @@
     border: 2px solid #f6fbfc !important;
   }
 }
+
+@media (max-width: 900px) {
+  .whyGrid article {
+    background: rgba(255, 255, 255, 0.88) !important;
+    backdrop-filter: blur(14px) saturate(1.2) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(1.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.72) !important;
+    box-shadow: 0 22px 60px rgba(7, 59, 90, 0.24) !important;
+  }
+
+  .whyGrid h3 {
+    color: #073b5a !important;
+    font-weight: 950 !important;
+    text-shadow: none !important;
+  }
+
+  .whyGrid p {
+    color: #12394f !important;
+    font-weight: 850 !important;
+    text-shadow: none !important;
+  }
+
+  .yachtGallery {
+    padding-bottom: 48px !important;
+    scrollbar-width: auto;
+    scrollbar-color: #10aeb5 rgba(216, 238, 243, 0.95);
+  }
+
+  .yachtGallery::-webkit-scrollbar {
+    height: 18px !important;
+  }
+
+  .yachtGallery::-webkit-scrollbar-track {
+    background: rgba(216, 238, 243, 0.95) !important;
+    border-radius: 999px !important;
+  }
+
+  .yachtGallery::-webkit-scrollbar-thumb {
+    background: #10aeb5 !important;
+    border-radius: 999px !important;
+    border: 3px solid rgba(216, 238, 243, 0.95) !important;
+  }
+}
