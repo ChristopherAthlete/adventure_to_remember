@@ -811,3 +811,11 @@
     padding: 6px 0 !important;
   }
 }
+
+@media (max-width: 760px) {
+  .bookingPage {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center top !important;
+  }
+}
