@@ -1295,37 +1295,23 @@
   }
 }
 
-.bookingBoxSection {
-  width: min(1180px, calc(100% - 40px));
-  margin: 0 auto;
-  padding: 40px 0 90px;
-  position: relative;
-  z-index: 5;
-}
-
-.bookingBoxSection > .bookingTag {
-  display: inline-block;
-  padding: 8px 16px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.94);
-  color: #073b5a !important;
-  font-weight: 950;
-  text-shadow: none !important;
-  box-shadow: 0 10px 28px rgba(7,59,90,0.18);
-}
-
-.bookingBoxSection > h2 {
-  display: inline-block;
-  max-width: 900px;
-  margin: 14px 0 30px;
-  padding: 16px 22px;
-  border-radius: 28px;
-  background: rgba(255,255,255,0.94);
+.bookingBoxSection .bookingTag {
   color: #05293f !important;
-  font-size: clamp(38px, 5vw, 70px);
-  line-height: 0.92;
-  letter-spacing: -0.06em;
-  font-weight: 950;
-  text-shadow: none !important;
-  box-shadow: 0 18px 50px rgba(7,59,90,0.22);
+  font-size: 16px !important;
+  font-weight: 950 !important;
+  letter-spacing: 0.15em;
+  text-shadow:
+    0 0 15px rgba(255,255,255,1),
+    0 0 30px rgba(255,255,255,1),
+    0 0 45px rgba(255,255,255,0.9);
+}
+
+.bookingBoxSection h2 {
+  color: #05293f !important;
+  font-weight: 950 !important;
+  text-shadow:
+    0 0 15px rgba(255,255,255,1),
+    0 0 30px rgba(255,255,255,1),
+    0 0 45px rgba(255,255,255,0.9),
+    0 0 60px rgba(255,255,255,0.8);
 }
