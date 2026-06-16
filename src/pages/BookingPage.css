@@ -898,3 +898,53 @@
     background: rgba(255,255,255,0.52);
   }
 }
+/* DESKTOP: jedno tło booking page */
+.bookingPage {
+  background:
+    linear-gradient(rgba(246,251,252,0.15), rgba(246,251,252,0.30)),
+    url('../assets/gallery/gallery-14.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+}
+
+/* ukryj mozaikę na desktopie */
+.mobileBookingBg {
+  display: none !important;
+}
+
+/* MOBILE: pokaż mozaikę tylko przy małym ekranie */
+@media (max-width: 900px) {
+  .bookingPage {
+    position: relative;
+    overflow: hidden;
+    background: #f6fbfc !important;
+    background-image: none !important;
+    background-attachment: scroll !important;
+  }
+
+  .mobileBookingBg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    opacity: 0.45;
+    pointer-events: none;
+  }
+
+  .mobileBookingBg img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .bookingHero,
+  .bookingLayout,
+  .bookingBoxSection,
+  .yachtGallerySection {
+    position: relative;
+    z-index: 2;
+  }
+}
