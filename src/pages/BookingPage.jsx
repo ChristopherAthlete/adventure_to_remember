@@ -207,7 +207,7 @@ templateParams.customer_message = getCustomerMessage(language, templateParams)
   return (
     <main className="bookingPage">
       <div className="mobileBookingBg" aria-hidden="true">
-  {[...bookingBgImages, ...bookingBgImages, ...bookingBgImages].map((image, index) => (
+  {bookingBgImages.map((image, index) => (
     <img src={image} alt="" key={index} />
   ))}
 </div>
@@ -407,7 +407,7 @@ templateParams.customer_message = getCustomerMessage(language, templateParams)
             <h3>{t.booking.croatiaAdventure}</h3>
             <p>{t.booking.itinerary}</p>
 
-            <strong>€18,000</strong>
+            <strong>€18.000</strong>
 
             <span className="priceSub">
               {t.booking.priceSub}
