@@ -521,12 +521,20 @@
   margin: 16px 0 10px;
   color: #073b5a;
   font-size: 21px;
+  font-weight: 950;
+  text-shadow:
+    0 1px 2px rgba(255,255,255,0.95),
+    0 0 10px rgba(255,255,255,0.8);
 }
 
 .whyGrid p {
   margin: 0;
-  color: #557287;
+  color: #315c73;
   line-height: 1.6;
+  font-weight: 700;
+  text-shadow:
+    0 1px 2px rgba(255,255,255,0.95),
+    0 0 8px rgba(255,255,255,0.75);
 }
 
 .yachtGallery {
@@ -850,7 +858,7 @@
   box-shadow: none;
   border-radius: 0;
 
-  color: #05293f;
+  color: #05293f; 
   font-size: clamp(32px, 4.5vw, 54px);
   line-height: 0.96;
   font-weight: 950;
@@ -860,11 +868,11 @@
 }
 
 .whyGrid article {
-  background: rgba(255,255,255,0.42);
-  backdrop-filter: blur(12px) saturate(1.12);
-  -webkit-backdrop-filter: blur(12px) saturate(1.12);
-  border: 1px solid rgba(255,255,255,0.38);
-  box-shadow: 0 18px 45px rgba(7,59,90,0.14);
+  background: rgba(255,255,255,0.22);
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 18px 45px rgba(7,59,90,0.12);
 }
 
 .whyGrid h3 {
@@ -898,7 +906,7 @@
     background: rgba(255,255,255,0.52);
   }
 }
-/* DESKTOP: jedno tło booking page */
+/* DESKTOP: jedno duże tło booking page */
 .bookingPage {
   background:
     linear-gradient(rgba(246,251,252,0.15), rgba(246,251,252,0.30)),
@@ -908,27 +916,31 @@
   background-attachment: fixed !important;
 }
 
-/* ukryj mozaikę na desktopie */
+/* domyślnie mozaika ukryta */
 .mobileBookingBg {
   display: none !important;
 }
 
-/* MOBILE: pokaż mozaikę tylko przy małym ekranie */
+/* MOBILE / MAŁE OKNO: mozaika tlo-1 do tlo-27 */
 @media (max-width: 900px) {
   .bookingPage {
-    position: relative;
-    overflow: hidden;
-    background: #f6fbfc !important;
-    background-image: none !important;
-    background-attachment: scroll !important;
-  }
+  position: relative !important;
+  background: #f6fbfc !important;
+  background-image: none !important;
+  background-attachment: scroll !important;
+  overflow: hidden !important;
+}
 
   .mobileBookingBg {
-    position: absolute;
-    inset: 0;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 0;
     display: grid !important;
     grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 230px;
     opacity: 0.45;
     pointer-events: none;
   }
@@ -944,7 +956,56 @@
   .bookingLayout,
   .bookingBoxSection,
   .yachtGallerySection {
-    position: relative;
-    z-index: 2;
+    position: relative !important;
+    z-index: 2 !important;
   }
+
+  .bookingBoxSection .bookingTag {
+    color: #05293f !important;
+    font-weight: 950 !important;
+    text-shadow:
+      0 0 10px rgba(255,255,255,1),
+      0 0 24px rgba(255,255,255,1) !important;
+  }
+
+  .bookingBoxSection h2 {
+    color: #05293f !important;
+    font-weight: 950 !important;
+    text-shadow:
+      0 0 10px rgba(255,255,255,1),
+      0 0 24px rgba(255,255,255,1),
+      0 0 40px rgba(255,255,255,0.95) !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .bookingBoxSection > .bookingTag {
+    color: #10aeb5 !important;
+    opacity: 1 !important;
+  }
+}
+.whyGrid article {
+  background: rgba(255,255,255,0.46) !important;
+  border-radius: 28px !important;
+  padding: 26px !important;
+  border: 1px solid rgba(255,255,255,0.58) !important;
+  box-shadow: 0 22px 65px rgba(7,59,90,0.18) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.whyGrid h3 {
+  color: #05293f !important;
+  font-weight: 950 !important;
+  text-shadow:
+    0 1px 2px rgba(255,255,255,1),
+    0 0 14px rgba(255,255,255,0.95) !important;
+}
+
+.whyGrid p {
+  color: #05293f !important;
+  font-weight: 850 !important;
+  text-shadow:
+    0 1px 2px rgba(255,255,255,1),
+    0 0 12px rgba(255,255,255,0.9) !important;
 }
