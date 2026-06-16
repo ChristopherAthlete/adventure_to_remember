@@ -72,7 +72,8 @@ const galleryImages = [
 
 ]
 
-function VideoSequence({ videos, poster }) {  const videoRef = useRef(null)
+function VideoSequence({ videos, poster }) {
+  const videoRef = useRef(null)
   const [index, setIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
 
@@ -118,30 +119,58 @@ function VideoSequence({ videos, poster }) {  const videoRef = useRef(null)
       videoRef.current.play().catch(() => setIsPlaying(false))
     }
   }, [index, isPlaying])
+useEffect(() => {
+  const isTouchDevice =
+    window.matchMedia('(hover: none) and (pointer: coarse)').matches
 
+  if (!isTouchDevice || !videoRef.current) return
+
+  const wrapper = videoRef.current.closest('.storyVideoWrap')
+  if (!wrapper) return
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+        playVideo()
+      } else {
+        stopVideo()
+      }
+    },
+    {
+      threshold: [0, 0.6, 1],
+    }
+  )
+
+  observer.observe(wrapper)
+
+  return () => observer.disconnect()
+}, [])
   return (
     <div
       className={`storyVideoWrap ${isPlaying ? 'isPlaying' : ''}`}
       onMouseEnter={playVideo}
       onMouseLeave={stopVideo}
     >
+      {!isPlaying && (
+        <img
+          className="videoPosterImage"
+          src={poster}
+          alt=""
+          loading="eager"
+        />
+      )}
+
       <video
-  ref={videoRef}
-  key={index}
-  className="storyVideo"
-  src={videos[index]}
-  poster={poster}
-  muted
-  playsInline
-  preload="auto"
-  onLoadedData={() => {
-    if (videoRef.current) {
-      videoRef.current.currentTime = 0.01
-    }
-  }}
-  onClick={toggleVideo}
-  onEnded={nextVideo}
-/>
+        ref={videoRef}
+        key={index}
+        className="storyVideo"
+        src={videos[index]}
+        muted
+        playsInline
+        preload="metadata"
+        onClick={toggleVideo}
+        onEnded={nextVideo}
+      />
 
       {!isPlaying && (
         <button
@@ -302,6 +331,7 @@ function scrollToSection(id) {
             </p>
           </div>
           <VideoSequence videos={[hero3]} poster={posters[1]} />
+
         </div>
 
 <div className="storyRow">
@@ -318,6 +348,7 @@ function scrollToSection(id) {
   </div>
 
   <VideoSequence videos={[hero16]} poster={posters[2]} />
+
 </div>
 
         <div className="storyRow reverse">
@@ -329,6 +360,7 @@ function scrollToSection(id) {
             </p>
           </div>
           <VideoSequence videos={[hero6, hero7, hero8]} poster={posters[3]} />
+
         </div>
 
         <div className="storyRow">
@@ -340,6 +372,7 @@ function scrollToSection(id) {
             </p>
           </div>
           <VideoSequence videos={[hero9, hero12, hero13]} poster={posters[4]} />
+
         </div>
 
         <div className="storyRow reverse">
@@ -351,6 +384,7 @@ function scrollToSection(id) {
             </p>
           </div>
           <VideoSequence videos={[hero10, hero11]} poster={posters[5]} />
+
         </div>
 
         <div className="storyRow">
@@ -362,6 +396,7 @@ function scrollToSection(id) {
             </p>
           </div>
           <VideoSequence videos={[hero14]} poster={posters[6]} />
+
         </div>
 
         <div className="storyRow reverse">
