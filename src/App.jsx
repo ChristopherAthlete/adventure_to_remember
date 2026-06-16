@@ -290,7 +290,7 @@ function scrollToSection(id) {
               {t.home.experiences[0][2]}
             </p>
           </div>
-          <VideoSequence videos={[hero1, hero2, hero4, hero5]} />
+          <VideoSequence videos={[hero1, hero2, hero4, hero5]} poster={posters[0]} />
         </div>
 
         <div className="storyRow reverse">
@@ -301,7 +301,7 @@ function scrollToSection(id) {
               {t.home.experiences[1][2]}
             </p>
           </div>
-          <VideoSequence videos={[hero3]} />
+          <VideoSequence videos={[hero3]} poster={posters[1]} />
         </div>
 
 <div className="storyRow">
@@ -317,7 +317,7 @@ function scrollToSection(id) {
 
   </div>
 
-  <VideoSequence videos={[hero16]} />
+  <VideoSequence videos={[hero16]} poster={posters[2]} />
 </div>
 
         <div className="storyRow reverse">
@@ -328,7 +328,7 @@ function scrollToSection(id) {
               {t.home.experiences[3][2]}
             </p>
           </div>
-          <VideoSequence videos={[hero6, hero7, hero8]} />
+          <VideoSequence videos={[hero6, hero7, hero8]} poster={posters[3]} />
         </div>
 
         <div className="storyRow">
@@ -339,7 +339,7 @@ function scrollToSection(id) {
               {t.home.experiences[4][2]}
             </p>
           </div>
-          <VideoSequence videos={[hero9, hero12, hero13]} />
+          <VideoSequence videos={[hero9, hero12, hero13]} poster={posters[4]} />
         </div>
 
         <div className="storyRow reverse">
@@ -350,7 +350,7 @@ function scrollToSection(id) {
               {t.home.experiences[5][2]}
             </p>
           </div>
-          <VideoSequence videos={[hero10, hero11]} />
+          <VideoSequence videos={[hero10, hero11]} poster={posters[5]} />
         </div>
 
         <div className="storyRow">
@@ -361,7 +361,7 @@ function scrollToSection(id) {
               {t.home.experiences[6][2]}
             </p>
           </div>
-          <VideoSequence videos={[hero14]} />
+          <VideoSequence videos={[hero14]} poster={posters[6]} />
         </div>
 
         <div className="storyRow reverse">
@@ -372,7 +372,7 @@ function scrollToSection(id) {
               {t.home.experiences[7][2]}
             </p>
           </div>
-          <VideoSequence videos={[hero15]} />
+          <VideoSequence videos={[hero15]} poster={posters[7]} />
         </div>
       </section>
 
