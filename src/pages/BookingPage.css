@@ -1313,3 +1313,47 @@
   line-height: 0.92;
 }
 
+/* FIX: napisy bez boxów, zawsze na środku */
+.bookingBoxSection {
+  text-align: center !important;
+}
+
+.bookingBoxSection .bookingTag {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 auto 18px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  color: #05293f !important;
+  font-size: 18px !important;
+  font-weight: 950 !important;
+  letter-spacing: 0.22em !important;
+  text-align: center !important;
+  opacity: 1 !important;
+}
+
+.bookingBoxSection h2 {
+  display: block !important;
+  width: 100% !important;
+  max-width: 1000px !important;
+  margin: 0 auto 34px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  color: #05293f !important;
+  font-size: clamp(52px, 8vw, 96px) !important;
+  line-height: 0.9 !important;
+  font-weight: 950 !important;
+  letter-spacing: -0.075em !important;
+  text-align: center !important;
+  opacity: 1 !important;
+
+  text-shadow:
+    0 2px 10px rgba(255,255,255,0.95),
+    0 0 24px rgba(255,255,255,0.9);
+}
