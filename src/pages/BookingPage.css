@@ -831,7 +831,7 @@
 }
 
 */
-
+/*
 @media (max-width: 900px) {
   .bookingPage {
     background:
@@ -1313,7 +1313,7 @@
   line-height: 0.92;
 }
 
-/* FIX: napisy bez boxów, zawsze na środku */
+
 .bookingBoxSection {
   text-align: center !important;
 }
@@ -1357,7 +1357,6 @@
     0 2px 10px rgba(255,255,255,0.95),
     0 0 24px rgba(255,255,255,0.9);
 }
-/* CENTER FIX dla sekcji Why Book + Yacht Gallery */
 .bookingBoxSection {
   width: min(1180px, calc(100% - 40px)) !important;
   margin-left: auto !important;
@@ -1389,4 +1388,117 @@
   box-shadow: none !important;
   border-radius: 0 !important;
   text-align: center !important;
+}
+.bookingBoxSection {
+  width: min(1180px, calc(100% - 40px)) !important;
+  margin: 0 auto !important;
+  padding: 55px 0 90px !important;
+  text-align: center !important;
+}
+
+.bookingBoxSection .bookingTag {
+  display: block !important;
+  margin: 0 auto 18px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+
+  color: #10aeb5 !important;
+  font-size: 15px !important;
+  font-weight: 950 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase !important;
+  text-align: center !important;
+  text-shadow:
+    0 2px 8px rgba(255,255,255,0.85);
+}
+
+.bookingBoxSection h2 {
+  display: block !important;
+  max-width: 900px !important;
+  margin: 0 auto 38px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+
+  color: #05293f !important;
+  font-size: clamp(42px, 6vw, 76px) !important;
+  line-height: 0.9 !important;
+  font-weight: 950 !important;
+  letter-spacing: -0.065em !important;
+  text-align: center !important;
+  text-shadow:
+    0 2px 12px rgba(255,255,255,0.9);
+}
+
+.whyGrid article {
+  background: rgba(255,255,255,0.72) !important;
+  backdrop-filter: blur(14px) saturate(1.15) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(1.15) !important;
+  border: 1px solid rgba(255,255,255,0.62) !important;
+  box-shadow: 0 22px 60px rgba(7,59,90,0.18) !important;
+}
+
+.whyGrid h3 {
+  color: #073b5a !important;
+  font-weight: 950 !important;
+}
+
+.whyGrid p {
+  color: #315c73 !important;
+  font-weight: 700 !important;
+}
+  */
+
+  /* ===== BOOKING SECTION FINAL ===== */
+
+.bookingBoxSection {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 55px 0 90px;
+  text-align: center;
+}
+
+.bookingBoxSection .bookingTag {
+  display: block;
+  margin: 0 auto 16px;
+  color: #10aeb5;
+  font-size: 15px;
+  font-weight: 950;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.bookingBoxSection h2 {
+  max-width: 1100px;
+  margin: 0 auto 42px;
+  color: #05293f;
+  font-size: clamp(34px, 5vw, 62px);
+  line-height: 0.95;
+  font-weight: 950;
+  letter-spacing: -0.05em;
+  text-align: center;
+  text-shadow:
+    0 2px 10px rgba(255,255,255,0.75);
+}
+
+.whyGrid article {
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 0 18px 45px rgba(7,59,90,0.14);
+}
+
+.whyGrid h3 {
+  color: #073b5a;
+  font-weight: 950;
+}
+
+.whyGrid p {
+  color: #315c73;
+  font-weight: 700;
 }
