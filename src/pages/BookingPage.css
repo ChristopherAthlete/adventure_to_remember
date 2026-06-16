@@ -1040,3 +1040,61 @@
     border: 3px solid rgba(216, 238, 243, 0.95) !important;
   }
 }
+
+@media (max-width: 900px) {
+  .bookingPage::after {
+    background: rgba(246, 251, 252, 0.18) !important;
+  }
+
+  .whyBook,
+  .whyGrid,
+  .whyGrid article {
+    position: relative !important;
+    z-index: 5 !important;
+  }
+
+  .whyGrid article {
+    background: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid rgba(7, 59, 90, 0.14) !important;
+    box-shadow: 0 18px 45px rgba(7, 59, 90, 0.22) !important;
+  }
+
+  .whyGrid h3 {
+    color: #073b5a !important;
+    opacity: 1 !important;
+    font-weight: 950 !important;
+    text-shadow: none !important;
+  }
+
+  .whyGrid p {
+    color: #073b5a !important;
+    opacity: 1 !important;
+    font-weight: 900 !important;
+    text-shadow: none !important;
+  }
+
+  .yachtGallery {
+    padding-bottom: 52px !important;
+    scrollbar-width: auto !important;
+    scrollbar-color: #10aeb5 #d8eef3 !important;
+  }
+
+  .yachtGallery::-webkit-scrollbar {
+    height: 18px !important;
+    display: block !important;
+    -webkit-appearance: none !important;
+  }
+
+  .yachtGallery::-webkit-scrollbar-track {
+    background: #d8eef3 !important;
+    border-radius: 999px !important;
+  }
+
+  .yachtGallery::-webkit-scrollbar-thumb {
+    background-color: #10aeb5 !important;
+    border-radius: 999px !important;
+    border: 3px solid #d8eef3 !important;
+  }
+}
