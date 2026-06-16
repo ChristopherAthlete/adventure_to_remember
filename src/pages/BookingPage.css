@@ -812,7 +812,7 @@
   }
 }
 
-@media (max-width: 760px) {
+/*@media (max-width: 760px) {
   .bookingPage {
     background-attachment: scroll !important;
     background-size: cover !important;
@@ -826,6 +826,59 @@
     background-size: contain !important;
     background-position: center top !important;
     background-repeat: no-repeat !important;
+    background-color: #f6fbfc !important;
+  }
+}
+
+*/
+
+@media (max-width: 900px) {
+  .bookingPage {
+    background:
+      linear-gradient(rgba(246,251,252,0.76), rgba(246,251,252,0.9)),
+      url('../assets/tlo-booking/tlo-1.JPG'),
+      url('../assets/tlo-booking/tlo-2.png'),
+      url('../assets/tlo-booking/tlo-3.png'),
+      url('../assets/tlo-booking/tlo-4.png'),
+      url('../assets/tlo-booking/tlo-5.png'),
+      url('../assets/tlo-booking/tlo-6.png'),
+      url('../assets/tlo-booking/tlo-7.png'),
+      url('../assets/tlo-booking/tlo-8.png') !important;
+
+    background-size:
+      auto,
+      50% 320px,
+      50% 320px,
+      50% 320px,
+      50% 320px,
+      50% 320px,
+      50% 320px,
+      50% 320px,
+      50% 320px !important;
+
+    background-position:
+      center,
+      left 0px,
+      right 0px,
+      left 320px,
+      right 320px,
+      left 640px,
+      right 640px,
+      left 960px,
+      right 960px !important;
+
+    background-repeat:
+      no-repeat,
+      repeat-y,
+      repeat-y,
+      repeat-y,
+      repeat-y,
+      repeat-y,
+      repeat-y,
+      repeat-y,
+      repeat-y !important;
+
+    background-attachment: scroll !important;
     background-color: #f6fbfc !important;
   }
 }
