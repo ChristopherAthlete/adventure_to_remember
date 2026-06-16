@@ -955,3 +955,45 @@
   }
 
 }
+
+@media (max-width: 900px) {
+  .whyGrid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .whyGrid article {
+    background: rgba(255, 255, 255, 0.94) !important;
+    border: 1px solid rgba(16, 174, 181, 0.28) !important;
+    box-shadow: 0 18px 50px rgba(7, 59, 90, 0.18) !important;
+  }
+
+  .whyGrid h3 {
+    color: #073b5a !important;
+    font-weight: 950 !important;
+  }
+
+  .whyGrid p {
+    color: #143f56 !important;
+    font-weight: 800 !important;
+  }
+
+  .yachtGallery {
+    padding-bottom: 42px !important;
+  }
+
+  .yachtGallery::-webkit-scrollbar {
+    height: 14px !important;
+  }
+
+  .yachtGallery::-webkit-scrollbar-track {
+    background: rgba(7, 59, 90, 0.18) !important;
+    border-radius: 999px !important;
+  }
+
+  .yachtGallery::-webkit-scrollbar-thumb {
+    background: #073b5a !important;
+    border-radius: 999px !important;
+    border: 2px solid #f6fbfc !important;
+  }
+}
