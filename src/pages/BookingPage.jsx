@@ -207,7 +207,16 @@ templateParams.customer_message = getCustomerMessage(language, templateParams)
   return (
     <main className="bookingPage">
       <div className="mobileBookingBg" aria-hidden="true">
-  {bookingBgImages.map((image, index) => (
+  {[
+  ...bookingBgImages,
+  ...bookingBgImages,
+  ...bookingBgImages,
+  ...bookingBgImages,
+  ...bookingBgImages,
+  ...bookingBgImages,
+  ...bookingBgImages,
+  ...bookingBgImages
+].map((image, index) =>  (
     <img src={image} alt="" key={index} />
   ))}
 </div>
