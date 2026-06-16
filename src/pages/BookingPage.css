@@ -1098,3 +1098,82 @@
     border: 3px solid #d8eef3 !important;
   }
 }
+
+@media (max-width: 900px) {
+  .bookingPage::after {
+    background: rgba(246, 251, 252, 0.08) !important;
+  }
+
+  .whyBook {
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  .whyBook .sectionTag {
+    display: inline-block !important;
+    padding: 8px 16px !important;
+    border-radius: 999px !important;
+    background: rgba(255, 255, 255, 0.78) !important;
+    color: #0d969c !important;
+    font-weight: 950 !important;
+    text-shadow: none !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+  }
+
+  .whyBook h2 {
+    padding: 14px 18px !important;
+    border-radius: 26px !important;
+    background: rgba(255, 255, 255, 0.72) !important;
+    color: #073b5a !important;
+    text-shadow: none !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+  }
+
+  .whyGrid article {
+    background: rgba(255, 255, 255, 0.72) !important;
+    backdrop-filter: blur(18px) saturate(1.15) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(1.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.78) !important;
+    box-shadow: 0 24px 70px rgba(7, 59, 90, 0.24) !important;
+  }
+
+  .whyGrid h3,
+  .whyGrid p {
+    color: #073b5a !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+  }
+
+  .whyGrid h3 {
+    font-weight: 950 !important;
+  }
+
+  .whyGrid p {
+    font-weight: 850 !important;
+  }
+
+  .yachtGallerySection::after {
+    content: "Swipe gallery →";
+    display: block;
+    width: calc(100% - 20px);
+    height: 18px;
+    margin: 12px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(
+      90deg,
+      #d8eef3 0%,
+      #d8eef3 32%,
+      #10aeb5 32%,
+      #10aeb5 58%,
+      #d8eef3 58%,
+      #d8eef3 100%
+    );
+    color: #073b5a;
+    font-size: 13px;
+    font-weight: 950;
+    line-height: 42px;
+    text-align: center;
+  }
+}
