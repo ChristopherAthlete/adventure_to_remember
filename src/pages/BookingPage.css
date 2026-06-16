@@ -1273,3 +1273,24 @@
     box-shadow: 0 10px 24px rgba(7, 59, 90, 0.18);
   }
 }
+@media (max-width: 900px) {
+  .bookingBoxSection .bookingTag {
+    color: #05293f !important;
+    font-size: 16px !important;
+    font-weight: 950 !important;
+    opacity: 1 !important;
+    text-shadow:
+      0 0 12px rgba(255,255,255,1),
+      0 0 24px rgba(255,255,255,1) !important;
+  }
+
+  .bookingBoxSection h2 {
+    color: #05293f !important;
+    font-weight: 950 !important;
+    opacity: 1 !important;
+    text-shadow:
+      0 0 12px rgba(255,255,255,1),
+      0 0 24px rgba(255,255,255,1),
+      0 0 40px rgba(255,255,255,0.9) !important;
+  }
+}
